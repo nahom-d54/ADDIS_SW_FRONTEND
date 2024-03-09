@@ -1,0 +1,23 @@
+:root {
+    --link-color: #2d91fb;
+    --link-color-light: rgb(23, 92, 167);
+    --link-danger: crimson;
+    --link-danger-light: rgb(182, 22, 54);
+    --text-black: #444544;
+    --card-bg: #f9f8f8;
+    --background: #131313;
+    --text-color: #fff;
+
+
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style-type: none;
+}
+
+ul li svg {
+    color: #777;
+}
