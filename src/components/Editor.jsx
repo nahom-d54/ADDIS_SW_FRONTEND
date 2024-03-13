@@ -3,31 +3,47 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Box, Button, Card } from 'rebass'
 import { setMusicSlice } from '../redux/slices/music';
 import { CREATE_MUSIC, UPDATE_MUSIC_BY_ID } from '../redux/sagas/types';
-import { nanoid } from '@reduxjs/toolkit';
+import { useState } from 'react';
+import FileInput from './FileInput';
 
-export default function Editor( {editorActive, setEditorActive } ) {
+
+export default function Editor( {editorActive, setEditorActive, type } ) {
     const dispatch = useDispatch();
     const music = useSelector(state => state.music )
+    const genres = useSelector(state => state.genres )
+    const [selectedFile, setSelectedFile] = useState(null);
+
     const handleChange = (prop) => ( event ) => {
         dispatch(setMusicSlice({...music, [prop]: event.target.value}))
     }
+   
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        music.id === null ? dispatch({type: CREATE_MUSIC, payload: {...music, id: nanoid(8)}}): dispatch({type: UPDATE_MUSIC_BY_ID, payload: music})
+        
+        music._id == null? dispatch({type: CREATE_MUSIC, payload: {...music, music_file: selectedFile }}): dispatch({type: UPDATE_MUSIC_BY_ID, payload: music})
         dispatch(setMusicSlice(
             {
-                id: null,
+                _id: null,
                 title: "",
                 artist: "",
                 genre: "",
-                duration: ""
             }
         ))
  
-        console.log("editor")
-        setEditorActive(false)
+        toggleEditor()
     }
+    const toggleEditor = () => {
+        setEditorActive(!editorActive)
+        dispatch(setMusicSlice(
+            {
+                _id: null,
+                title: "",
+                artist: "",
+                genre: "",
+            }))
+    }
+    
     
   return (
     <Box css={css`
@@ -48,7 +64,7 @@ export default function Editor( {editorActive, setEditorActive } ) {
         z-index: 1;
         background: #000;
         opacity: 0.7;`}
-        onClick={() => setEditorActive(!editorActive)}
+        onClick={toggleEditor}
         />
         
             <Card css={css`
@@ -74,13 +90,27 @@ export default function Editor( {editorActive, setEditorActive } ) {
                     </Box>
                     <Box className='form-group'>
                         <label htmlFor="genre">Genre</label>
-                        <input type="text" id='genre' onChange={handleChange('genre')} value={music.genre}/>
+                        {/* make genre select option */}
+                        <select style={{padding: "0.5rem"}} id="genre" onChange={handleChange('genre')} >
+                            {genres.map(g => (
+                                <option selected={music.genre._id == g._id} key={g._id} value={g._id}>{g.name}</option>
+                            ))}                
+                        </select>
 
                     </Box>
+                    {/*
                     <Box className='form-group'>
                         <label htmlFor="duration">Duration</label>
                         <input type="text" id='duration' onChange={handleChange('duration')} value={music.duration}/>
                     </Box>
+                    */}
+                    {type === 'add' &&
+                    <Box className='form-group'>
+                        <label htmlFor="file">Music</label>
+                        <FileInput selectedFile={selectedFile} setSelectedFile={setSelectedFile}/>
+                    </Box>
+                    }
+                    
                     <Button css={css`
                         background: var(--link-color);
                         cursor: pointer;
