@@ -6,7 +6,10 @@
 git clone https://github.com/nahom-d54/ADDIS_SW_FRONTEND
 cd ADDIS_SW_FRONTEND
 npm i
+npm run build
 ```
+## After the build dist folder will be created so as any static site you can run it anywhwre
+
 | Note that this app requires to run the backend found in
 * [Backend](https://github.com/nahom-d54/ADDIS_SW_BACKEND)
 * currently running at [https://intern.web.nahom.eu.org](https://intern.web.nahom.eu.org)
