@@ -11,8 +11,8 @@ npm i
 * [Backend](https://github.com/nahom-d54/ADDIS_SW_BACKEND)
 * currently running at [https://intern.web.nahom.eu.org](https://intern.web.nahom.eu.org)
 * 
-.. additional features includes
-  . limit access to edit and delete to the user who added the data
-  . creation of user by email
-  . pagination
-  . music file upload and download
+** additional features includes
+  * limit access to edit and delete to the user who added the data
+  * creation of user by email
+  * pagination
+  * music file upload and download
