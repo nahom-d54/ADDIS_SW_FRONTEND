@@ -26,11 +26,11 @@ const musics = createSlice({
             return state
         },
         editMusicSlice: (state, action ) => {
-            state.data = state.data.map( i => i.id === action.payload.id ? action.payload: i )
+            state.data = state.data.map( i => i._id === action.payload._id ? action.payload: i )
             return state
         },
         deleteMusicSlice: (state, action) => {
-            state.data = state.data.filter( i => i.id != action.payload.id )
+            state.data = state.data.filter( i => i._id != action.payload._id )
             return state
         },
         // expirement

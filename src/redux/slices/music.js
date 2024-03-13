@@ -4,11 +4,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const music = createSlice({
     name: 'music',
     initialState: {
-        id: null,
+        _id: null,
         title: "",
         artist: "",
         genre: "",
-        duration: ""
+        duration: "",
+        mimetype: "",
+        path: ""
         },
     reducers: {
         setMusicSlice: (state, action) => {
