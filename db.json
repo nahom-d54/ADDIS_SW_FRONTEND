@@ -1,0 +1,143 @@
+{ "musics" :[
+    {
+      "id": 1,
+      "title": "Bohemian Rhapsody",
+      "artist": "Queen",
+      "genre": "Rock",
+      "duration": "5:55"
+    },
+    {
+      "id": 2,
+      "title": "Hotel California",
+      "artist": "Eagles",
+      "genre": "Rock",
+      "duration": "6:30"
+    },
+    {
+      "id": 3,
+      "title": "Imagine",
+      "artist": "John Lennon",
+      "genre": "Pop",
+      "duration": "3:01"
+    },
+    {
+      "id": 4,
+      "title": "Hey Jude",
+      "artist": "The Beatles",
+      "genre": "Rock",
+      "duration": "7:11"
+    },
+    {
+      "id": 5,
+      "title": "Bohemian Like You",
+      "artist": "The Dandy Warhols",
+      "genre": "Indie Rock",
+      "duration": "3:31"
+    },
+    {
+      "id": 6,
+      "title": "Wonderwall",
+      "artist": "Oasis",
+      "genre": "Rock",
+      "duration": "4:19"
+    },
+    {
+      "id": 7,
+      "title": "Stairway to Heaven",
+      "artist": "Led Zeppelin",
+      "genre": "Rock",
+      "duration": "8:02"
+    },
+    {
+      "id": 8,
+      "title": "Thriller",
+      "artist": "Michael Jackson",
+      "genre": "Pop",
+      "duration": "5:57"
+    },
+    {
+      "id": 9,
+      "title": "Sweet Child o' Mine",
+      "artist": "Guns N' Roses",
+      "genre": "Rock",
+      "duration": "5:55"
+    },
+    {
+      "id": 10,
+      "title": "Smells Like Teen Spirit",
+      "artist": "Nirvana",
+      "genre": "Grunge",
+      "duration": "5:01"
+    },
+    {
+      "id": 11,
+      "title": "Bohemian Trapsody",
+      "artist": "Aminé",
+      "genre": "Rap",
+      "duration": "4:42"
+    },
+    {
+      "id": 12,
+      "title": "Shape of You",
+      "artist": "Ed Sheeran",
+      "genre": "Pop",
+      "duration": "3:53"
+    },
+    {
+      "id": 13,
+      "title": "Hotline Bling",
+      "artist": "Drake",
+      "genre": "Hip Hop",
+      "duration": "4:27"
+    },
+    {
+      "id": 14,
+      "title": "Bohemian Rhapsody",
+      "artist": "Panic! at the Disco",
+      "genre": "Pop Rock",
+      "duration": "6:00"
+    },
+    {
+      "id": 15,
+      "title": "Billie Jean",
+      "artist": "Michael Jackson",
+      "genre": "Pop",
+      "duration": "4:54"
+    },
+    {
+      "id": 16,
+      "title": "Hotel California",
+      "artist": "Tyga",
+      "genre": "Hip Hop",
+      "duration": "3:29"
+    },
+    {
+      "id": 17,
+      "title": "Let It Be",
+      "artist": "The Beatles",
+      "genre": "Rock",
+      "duration": "4:03"
+    },
+    {
+      "id": 18,
+      "title": "Sweet Child o' Mine",
+      "artist": "Taken by Trees",
+      "genre": "Indie Pop",
+      "duration": "3:38"
+    },
+    {
+      "id": 19,
+      "title": "Hotel California",
+      "artist": "Gypsy Kings",
+      "genre": "Latin",
+      "duration": "5:47"
+    },
+    {
+      "id": 20,
+      "title": "Bohemian Rhapsody",
+      "artist": "Pentatonix",
+      "genre": "A cappella",
+      "duration": "6:27"
+    }
+  ]
+}
